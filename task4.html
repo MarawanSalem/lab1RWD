@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width:992px) {
+    .gri{
+        grid-template-rows: repeat(5,1fr);
+    }
+    .main,.sidebar,.sidenav,footer,header{
+        grid-column: 1/5;
+    }
+    header{
+        grid-row: 1/2;
+    }
+    .sidenav{
+        grid-row: 2/3;
+    }
+    .main{
+        grid-row: 3/4;
+    }
+    .sidebar{
+        grid-row: 4/5;
+    }
+}
+footer{
+    grid-row: 5/6;
+}
+    
+
+.gr2{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cen-div{
+    width: 30%;
+    height: 60%;
+    display: grid;
+    transform: rotate(45deg);
+    grid-template-areas: 
+    "child1 child2 child2"
+    "child1 child3 child4"
+    "child5 child5 child4"
+    
+    ;
+    grid-auto-rows: auto;
+    text-align: center;
+    color: white;
+    gap: 10px;
+
+}
+.cen-div .child1{
+    grid-area: child1;
+    background-color: black;
+}
+.cen-div .child2{
+    grid-area: child2;
+    background-color: black;
+}
+.cen-div .child3{
+    grid-area: child3;
+    background-color: black;
+}
+.cen-div .child4{
+    grid-area: child4;
+    background-color: black;
+}
+.cen-div .child5{
+    grid-area: child5;
+    background-color: black;
+}
+@media screen and (max-width:1200px) and (min-width:993px){
+
+    .cen-div{
+        transform: rotate(30deg);
+    }
+    .gr2{
+        background-color: #09c;
+    }
+}
+@media screen and (max-width:992px) and (min-width:768px){
+    .bod{
+        flex-direction: column;
+    }
+    .bod section{
+        width: 98%;
+    }
+    .cen-div{
+        transform: rotate(15deg);
+    }
+    .gr2{
+        background-color: tomato;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .cen-div{
+        transform: rotate(0deg);
+    }
+    .gr2{
+        background-color: #efc7c7;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="gr2">
+        <div class="cen-div">
+            <div class="child1">1</div>
+            <div class="child2">2</div>
+            <div class="child3">3</div>
+            <div class="child4">4</div>
+            <div class="child5">5</div>
+        </div>
+    </section>
+    
+</body>
+</html>
